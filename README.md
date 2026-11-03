@@ -2,6 +2,8 @@
 
 A standalone Next.js App Router website with TypeScript, responsive CSS, original generated architectural imagery, curved hero framing, a rotating SVG seal, and Great Vibes, Instrument Serif, and DM Sans typography.
 
+![Avora homepage hero](docs/hero-preview.webp)
+
 ## Run
 
 npm install
