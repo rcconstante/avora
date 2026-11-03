@@ -1,0 +1,10 @@
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  cacheComponents: true,
+  partialPrefetching: true,
+  poweredByHeader: false,
+  images: { qualities: [75, 90] },
+};
+
+export default nextConfig;
