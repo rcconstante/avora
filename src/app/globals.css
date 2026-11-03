@@ -395,91 +395,11 @@ h2 em {
 p {
   line-height: 1.8;
 }
-.about {
-  display: grid;
-  grid-template-columns: 1fr 2fr 0.8fr;
-  gap: 30px;
-  align-items: start;
-  border-top: 1px solid var(--line);
-}
-.about p {
-  color: var(--muted);
-  max-width: 430px;
-}
-.text-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 25px;
-  font-size: 12px;
-  margin-top: 17px;
-  border-bottom: 1px solid #aaa99d;
-  padding-bottom: 10px;
-}
-.text-link svg {
-  width: 19px;
-  height: 19px;
-}
-.large-sun {
-  align-self: center;
-  justify-self: end;
-  color: #9ca78c;
-}
-.large-sun svg {
-  width: 150px;
-  height: 150px;
-  stroke-width: 0.6;
-}
-.section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.services {
-  border-top: 1px solid var(--line);
-}
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 40px;
-}
-.service-item {
-  padding: 25px 35px;
-  border-left: 1px solid #d7d8cd;
-}
-.service-item:first-child {
-  padding-left: 0;
-  border-left: 0;
-}
-.service-item > svg {
-  width: 65px;
-  height: 65px;
-  stroke-width: 0.8;
-  color: #727e61;
-  transition: transform 0.3s;
-}
-.service-item:hover > svg {
-  transform: rotate(15deg);
-}
 h3 {
   font-family: var(--font-serif), Georgia, serif;
   font-size: 33px;
   font-weight: 400;
   margin: 25px 0 12px;
-}
-.service-item p {
-  color: var(--muted);
-  max-width: 260px;
-  font-size: 13px;
-}
-.service-item > span {
-  display: flex;
-  align-items: center;
-  gap: 35px;
-  margin-top: 28px;
-  font-size: 11px;
-}
-.service-item > span svg {
-  width: 18px;
 }
 .faq {
   display: grid;
@@ -681,9 +601,6 @@ footer svg {
   .section-wrap {
     padding: 75px 35px;
   }
-  .about {
-    grid-template-columns: 1fr 2fr;
-  }
   .large-sun {
     display: none;
   }
@@ -692,17 +609,11 @@ footer svg {
     font-size: 8px;
     letter-spacing: 1px;
   }
-  .service-item {
-    padding: 20px;
-  }
   .service-item h3 {
     font-size: 28px;
   }
   .faq {
     gap: 40px;
-  }
-  .section-heading {
-    gap: 30px;
   }
 }
 @media (max-width: 600px) {
@@ -848,45 +759,23 @@ footer svg {
   .section-wrap {
     padding: 60px 25px;
   }
-  .about {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
   .about h2 {
     font-size: 45px;
   }
-  .about p {
-    font-size: 13px;
-  }
   .section-heading {
     display: block;
-  }
-  .section-heading .eyebrow {
-    margin-bottom: 26px;
   }
   .service-grid {
     grid-template-columns: 1fr;
     margin-top: 20px;
   }
   .service-item,
-  .service-item:first-child {
-    padding: 30px 0;
-    border-left: 0;
-    border-bottom: 1px solid var(--line);
-  }
   .service-item > svg {
     width: 53px;
     height: 53px;
   }
-  .service-item h3 {
-    margin-top: 20px;
-    font-size: 32px;
-  }
   .service-item p {
     max-width: none;
-  }
-  .service-item > span {
-    margin-top: 20px;
   }
   .faq {
     grid-template-columns: 1fr;
@@ -938,5 +827,67 @@ footer svg {
   *:after {
     animation: none !important;
     transition: none !important;
+  }
+}
+.avora-footer.section-wrap {
+  max-width: 1440px;
+  background: #080b07;
+  color: #fff;
+  padding: 75px 60px 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.3fr;
+  align-items: start;
+  gap: 35px;
+  border: 0;
+}
+.avora-footer nav {
+  display: grid;
+  gap: 14px;
+  font-size: 11px;
+  color: #bfc7b5;
+}
+.avora-footer nav h3 {
+  font-size: 22px;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 10px;
+}
+.avora-footer nav a:hover {
+  color: white;
+  text-decoration: underline;
+}
+.avora-footer > div .wordmark {
+  font-size: 28px;
+}
+.avora-footer > div p {
+  font-size: 12px;
+  color: #aab59f;
+  max-width: 260px;
+  line-height: 1.8;
+  margin-top: 25px;
+}
+.avora-footer .footer-bottom {
+  grid-column: 1/-1;
+  border-top: 1px solid #ffffff22;
+  padding-top: 25px;
+  margin-top: 20px;
+  color: #99a28f;
+  font-size: 10px;
+}
+@media (max-width: 650px) {
+  .avora-footer.section-wrap {
+    padding: 50px 25px 25px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .avora-footer > div {
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+  .avora-footer nav {
+    font-size: 10px;
+  }
+  .avora-footer nav h3 {
+    font-size: 21px;
   }
 }

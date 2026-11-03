@@ -1,3 +1,4 @@
+import { TravelSections } from "@/components/travel-sections";
 import Image from "next/image";
 import { BookingForm } from "@/components/booking-form";
 import { Header } from "@/components/header";
@@ -63,70 +64,7 @@ export default function Home() {
             <span>A NEW PERSPECTIVE ON GETTING AWAY.</span>
           </div>
         </section>
-        <section id="about" className="about section-wrap">
-          <div className="eyebrow">01 / THE AVORA WAY</div>
-          <div>
-            <h2>
-              A place to stay.
-              <br />
-              <em>A feeling to take home.</em>
-            </h2>
-            <p>
-              A slow morning by the pool. A room filled with sunlight. A new
-              city that feels a little like home. We believe the best journeys
-              begin with a place that feels right.
-            </p>
-            <a className="text-link" href="#service">
-              Find your kind of escape <Icon name="arrow" />
-            </a>
-          </div>
-          <div className="large-sun" aria-hidden="true">
-            <Icon name="sun" />
-          </div>
-        </section>
-        <section id="service" className="services section-wrap">
-          <div className="section-heading">
-            <div className="eyebrow">02 / ROOM FOR YOUR KIND OF TRAVEL</div>
-            <h2>However you wander.</h2>
-          </div>
-          <div className="service-grid">
-            {[
-              {
-                icon: "sun" as const,
-                title: "A slower escape",
-                text: "Quiet corners, private pools, and time to do a little less.",
-                query: "Palm Springs",
-              },
-              {
-                icon: "compass" as const,
-                title: "A different perspective",
-                text: "Character-filled hotels at the heart of somewhere new.",
-                query: "Lisbon",
-              },
-              {
-                icon: "flower" as const,
-                title: "A moment together",
-                text: "Room to reconnect, celebrate, and make a memory.",
-                query: "Bali",
-              },
-            ].map((item) => (
-              <a
-                className="service-item"
-                href={`https://www.booking.com/searchresults.html?ss=${encodeURIComponent(item.query)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={item.title}
-              >
-                <Icon name={item.icon} />
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <span>
-                  Explore stays <Icon name="arrow" />
-                </span>
-              </a>
-            ))}
-          </div>
-        </section>
+        <TravelSections />
         <section id="faq" className="faq section-wrap">
           <div>
             <div className="eyebrow">03 / A FEW THINGS TO KNOW</div>
@@ -181,19 +119,43 @@ export default function Home() {
           </a>
         </section>
       </main>
-      <footer id="contact" className="section-wrap">
-        <a className="wordmark" href="#home" aria-label="Avora home">
-          AVORA
-        </a>
-        <p>A little closer to somewhere special.</p>
-        <a
-          href="https://www.booking.com/customer-service.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Booking support <Icon name="arrow" />
-        </a>
-        <span>© 2026 Avora</span>
+      <footer id="contact" className="avora-footer section-wrap">
+        <nav aria-label="Explore Avora">
+          <h3>Explore</h3>
+          <a href="#stays">Discover stays</a>
+          <a href="#service">Destinations</a>
+          <a href="#event">Special occasions</a>
+        </nav>
+        <nav aria-label="About Avora">
+          <h3>About</h3>
+          <a href="#about">Our approach</a>
+          <a href="#service">How we travel</a>
+          <a href="#faq">Frequently asked questions</a>
+        </nav>
+        <nav aria-label="Guest support">
+          <h3>Guest support</h3>
+          <a
+            href="https://www.booking.com/customer-service.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Booking support ↗
+          </a>
+          <a href="#faq">Booking questions</a>
+          <a href="#home">Plan a stay</a>
+        </nav>
+        <div>
+          <a className="wordmark" href="#home" aria-label="Avora home">
+            AVORA
+          </a>
+          <p>
+            Exceptional places, private retreats, and a little inspiration for
+            the way you love to travel.
+          </p>
+        </div>
+        <span className="footer-bottom">
+          © 2026 Avora · An original travel website concept.
+        </span>
       </footer>
     </>
   );
