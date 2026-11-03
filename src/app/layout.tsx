@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Great_Vibes, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import { PreviewCredit } from "@/components/preview-credit";
 const body = DM_Sans({
   subsets: ["latin"],
   variable: "--font-body",
@@ -32,6 +33,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${body.variable} ${script.variable} ${serif.variable}`}>
         {children}
+        <PreviewCredit
+          theme="avora"
+          sourceHref="https://dribbble.com/shots/27849968-STAYRA-Luxury-Hotel-Booking-Website"
+        />
       </body>
     </html>
   );
