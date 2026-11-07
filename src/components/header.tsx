@@ -28,7 +28,7 @@ export function Header() {
       </nav>
       <div className="header-actions">
         <span className="language" title="This website is in English">
-          EN <span aria-hidden="true">⌄</span>
+          EN <span aria-hidden="true">›</span>
         </span>
         <span className="header-dot" aria-hidden="true">
           ·
